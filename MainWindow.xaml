@@ -1,0 +1,78 @@
+﻿<Window x:Class="RickAndMorty_06._10._23.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RickAndMorty_06._10._23"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="Black" >
+    <Window.Resources>
+        <FontFamily x:Key="GoogleFont">/RickAndMorty_06.10.23;component/Fonts/Creepster-Regular.ttf#Creepster</FontFamily>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+         <Label Grid.Column="2" Grid.ColumnSpan="2" FontFamily="{StaticResource GoogleFont}" FontSize="40" Margin="10 0 10 0" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">
+             <Label.Content>
+                 <TextBlock>
+                     <TextBlock.Foreground>
+                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                             <GradientStop Color="#0f6f26" Offset="0.0" />
+                             <GradientStop Color="#01ff00" Offset="1.0" />
+                         </LinearGradientBrush>
+                     </TextBlock.Foreground>
+                 The Rick and Morty
+                 </TextBlock>
+             </Label.Content>
+         </Label>
+        <Menu Grid.Column="1" Grid.Row="0" x:Name="Next" Width="80" Height="80" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center">
+            <MenuItem Width="160" Height="90" VerticalContentAlignment="Center">
+                <MenuItem.HeaderTemplate>
+                    <DataTemplate>
+                        <Image Margin="0 0 15 10" Source="C:\Users\Xiaomi\Desktop\ШАГ2021\PV221\Систем\RickAndMorty_06.10.23\Image\menu.png" Width="60" Height="60" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </DataTemplate>
+                </MenuItem.HeaderTemplate>
+                <MenuItem Header="Персонажи"/>
+                <MenuItem Header="Серии"/>
+            </MenuItem>
+            
+        </Menu>
+    </Grid>
+    <!--<Grid>
+        <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+    <ListView x:Name="LV" Grid.Row="1">
+        <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+                <UniformGrid Columns="3"/>
+            </ItemsPanelTemplate>
+        </ListBox.ItemsPanel>
+        <ListView.ItemTemplate>
+            <DataTemplate x:Name="SingleLineDataTemplate">
+                <StackPanel>
+                    <Image Source="{Binding ImageURL}"/>
+                    <TextBlock Text="{Binding Name}"/>
+                </StackPanel>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <Button Content="Prev" Width="100" Height="25" Margin="0 0 10 0" Click="Button_Click_Prev"  />
+        <Button Content="Next" Width="100" Height="25" Margin="0 0 10 0" Click="Button_Click_Next" />
+
+    </StackPanel>
+    </Grid>-->
+</Window>
